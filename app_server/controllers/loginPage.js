@@ -6,7 +6,7 @@ var apiOptions = {
   server: "http://localhost:3000"
 };
 if (process.env.NODE_ENV === "production") {
-  apiOptions.server = "https://loc8r-session.herokuapp.com";
+  apiOptions.server = "https://replica-of-instagram.herokuapp.com/";
 }
 
 var sendJSONresponse = function (res, status, content) {
