@@ -1,0 +1,54 @@
+extends layout
+
+block content
+  br
+  br
+  br
+  br
+  .container
+    h1(style="color:white;font-family: 'Billabong'") Edit Profile
+    hr
+    .row
+      .col-md-9.personal-info
+        .alert.alert-info.alert-dismissable
+          a.panel-close.close(data-dismiss='alert') ×
+          i.fa.fa-coffee
+          |         This is an 
+          strong .alert
+          | . Use this to show important messages to the user.
+        h3(style="color:white;font-family: 'Billabong'") Personal Information
+          br
+          br
+          form.form-horizontal(role='form', method='post',action='/edit?_method=put',enctype='multipart/form-data')
+            .form-group()
+              img.rounded-circle.img-fluid.d-block.mx-auto( src=displayPicture, alt='avatar')
+              br
+              h6(style='color:white') Upload a different photo:
+              input#upload(name='profilePicture',type='file')
+              a#uploadMyFile1.btn.btn-outline.btn-xl.js-scroll-trigger(href='') UPLOAD picture
+            .form-group(style='color:white')
+              label.col-md-3.control-label Username:
+              .col-md-8
+                input.form-control(id='username', name='username',type='text', value=currentUser, readonly='')
+            .form-group(style='color:white')
+              label.col-md-3.control-label Bio:
+              .col-md-8
+                input.form-control(id='bio', name='bio',type='text', value=currentBio)
+            .form-group(style='color:white')
+              label.col-md-3.control-label Password:
+              .col-md-8
+                input.form-control(name='password1', id='password1',type='password')
+            .form-group(style='color:white')
+              label.col-md-3.control-label Confirm password:
+              .col-md-8
+                input.form-control(name='password2', id='password2', type='password')
+            .form-group(style='color:white')
+              label.col-md-3.control-label
+              .col-md-8
+                input.btn.btn-outline.btn-xl.js-scroll-trigger(value='Update', type='submit',name='submit')
+                |
+                span
+                a.btn.btn-outline.btn-xl.js-scroll-trigger(value='delete', href='/deleteForm') Delete
+                |  
+                span
+                a.btn.btn-outline.btn-xl.js-scroll-trigger(href='/feed') Cancel

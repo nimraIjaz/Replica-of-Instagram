@@ -1,0 +1,37 @@
+extends layout
+
+block content
+  br
+  br
+  br
+  .container
+      a(href="/profile/"+myPost.id style="color:white")
+        h1.my-4(style="color:white;font-family:'Billabong'") 
+          b
+            = myPost.name
+      
+      .row
+        .col-md-8
+          img.img-fluid(src='/images/'+myPost.pid, alt='')
+          br
+        .col-md-4
+          h4.my-3(style="color:white;font-family:'Billabong'") 
+            b  
+              = myPost.caption
+          | 
+          |          
+          br
+          br
+          -var index=0;
+          each entry in myPost.comments
+            p(style='color:rgb(228, 183, 183)') 
+              = entry
+          -index++;
+          form.form-horizontal(method="POST",action="/postCommentOther/"+myPost._id,role="form")
+            .form-group(style='color:white')
+              .col-md-9(display='inline-block')
+                input.form-control(type='text',name="comment", placeholder='Type a comment..')
+            input.btn.btn-outline.btn-xl.js-scroll-trigger(type='submit',name='submit',value='Comment',style="color:black")
+            
+  .container
+    br  

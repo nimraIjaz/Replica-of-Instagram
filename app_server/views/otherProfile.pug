@@ -1,0 +1,59 @@
+extends layout
+ 
+block content
+  section
+      .container
+        .row.align-items-center
+          .col-lg-6
+            .p-5
+              img.img-fluid.rounded-circle(src='/images/'+displayPicture, alt='')
+          .col-lg-6
+            .p-5
+              h2(style="color:white;font-family: 'Billabong'")
+                b 
+                  = username
+                |  
+                | 
+              .col-lg-10
+              span
+              a.btn.btn-outline.btn-xl.js-scroll-trigger(href="/followers/"+myid)
+                b 
+                  |  followers
+              |  
+              span
+              a.btn.btn-outline.btn-xl.js-scroll-trigger(href="/following/"+myid) 
+                b  
+                  |  following
+              
+                |  
+                |  
+                |  
+              br
+              br
+              b(style='color:white')
+                =inform
+              br
+              br
+              .col-lg-10
+              span
+              form.form-horizontal(method="POST",action="/userFollow/"+myid,role="form")
+                |   
+                input.btn.btn-outline.btn-xl.js-scroll-trigger(type='submit',name='submit',value='FOLLOW',style="color:black")
+                |  
+              
+                a.btn.btn-outline.btn-xl.js-scroll-trigger(style='color:white', href="/userUnfollow/"+myid)
+                  b
+                    |  UNFOLLOW
+      section#portfolio
+        .container
+          .row
+            .col-lg-12.text-center
+              h2.section-heading(style="color:white;font-family: 'Billabong'") portfolio
+              br
+          .row
+            -var index=0;
+            each entry in uploads
+              .col-md-4.col-sm-6.portfolio-item
+                a.portfolio-link(href="/otherPost/"+entry._id)
+                  img.img-fluid.feedImage(src="/images/"+entry.pid, alt='')
+            -index++;    

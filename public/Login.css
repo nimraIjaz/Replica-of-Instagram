@@ -1,0 +1,42 @@
+body
+{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	color:#000066;
+}
+
+h1, form
+{
+	font-size:16pt;
+}
+
+#LoggedIn, #BadLogin
+{
+	display:none;
+}
+
+#BadLogin
+{
+	color:red;
+	width:250px;
+	text-align:justify;
+}
+
+#LoginButtonDiv
+{
+	width:238px;
+	text-align:right;
+}
+
+label {
+	display:block;
+	float:left;
+	width:120px;
+}
+
+div.FormRow {
+	clear:both;
+}
+
+.HighLighted {
+	border: 1px dotted red;
+}

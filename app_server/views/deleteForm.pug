@@ -1,0 +1,37 @@
+extends layout
+
+block content
+  br
+  br
+  br
+  br
+  .container
+    h1(style="color:white;font-family: 'Billabong'") Delete Profile
+    hr
+    .row
+      .col-md-3
+        .text-center
+          img.rounded-circle.img-fluid.d-block.mx-auto(src='img/bg-cta.jpg', alt='avatar')
+          br
+          br
+          br
+      .col-md-9.personal-info
+        .alert.alert-info.alert-dismissable
+          a.panel-close.close(data-dismiss='alert') ×
+          i.fa.fa-coffee
+          |         This is an 
+          strong .alert
+          | . ARE YOU SURE YOU WANT TO DELETE YOUR ACCOUNT?
+        h3(style="color:white;font-family: 'Billabong'") Delete Account
+          br
+          br
+          
+          form.form-horizontal(role='form', method='post',action='/deleteForm?_method=delete')
+            .form-group(style='color:white')
+              label.col-md-3.control-label
+              .col-md-8
+                span
+                input.btn.btn-outline.btn-xl.js-scroll-trigger(value='delete', type='submit',name='submit')
+                |  
+                span
+                a.btn.btn-outline.btn-xl.js-scroll-trigger(href='/feed') Cancel

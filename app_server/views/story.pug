@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  br
+  br
+  br
+  br
+  .container
+      h1.my-4(style="color:white;font-family:'Billabong'")
+        b  
+          = myStory.name
+        | 
+      .row
+        .col-md-8
+          img.img-fluid(src='/images/'+myStory.pid, alt='')
+        .col-md-4
+          h3.my-3(style="color:white;font-family:'Billabong'")
+            
+            a(href="/story/"+myStory._id+"/delete")
+              | Delete &nbsp;
+              |     
+              |  
+              i.fa.fa-trash(style='color:white;font-size:25px')

@@ -1,0 +1,96 @@
+extends layout
+
+block content
+  br
+  br
+  br
+  br
+  .container
+      .row
+        .col-lg-5
+          h1(style="font-family:'Billabong';color:white;") Stories
+          .checkOverflow
+            .changeFont
+              h3(style="font-family:'Billabong';color:white;") My Stories
+                -var index3=0;
+                each entry2 in onlyMyStory
+                  a(href="/story/"+entry2._id, style="font-family:'Billabong';color:white;font-size: 30px")
+                    p
+                      img.storyImg(src='/images/'+entry2.pid, display='inline')
+                      |      
+                      |                   
+                      =entry2.name
+                -index3++;
+              h3(style="font-family:'Billabong';color:white;") Other Stories
+                -var index=0;
+                each entry1 in allStory
+                  a(href="/otherStory/"+entry1._id, style="font-family:'Billabong';color:white;font-size: 30px")
+                    p
+                      img.storyImg(src='/images/'+entry1.pid, display='inline')
+                      |      
+                      |                   
+                      =entry1.name
+                -index++;
+        .col-lg-4
+          h1(style="font-family:'Billabong';color:white;") What's up?
+          br
+          a.btn.btn-outline.btn-xl.js-scroll-trigger(href='/upload') UPLOAD STORY
+          br
+          br
+          a.btn.btn-outline.btn-xl.js-scroll-trigger(href='/upload') UPLOAD PHOTO
+          br
+          
+        .col-lg-3
+          
+          h1(style="font-family:'Billabong';color:white;") Welcome
+            b
+              |  
+              =currentUser
+          br
+          
+          -var indexx=0;
+          each entryy in dp
+            img.rounded-circle.img-fluid.d-block.mx-auto(src=entryy.nama, alt='avatar')
+          -indexx++;
+          br
+          a.btn.btn-outline.btn-xl.js-scroll-trigger(href='/edit') Edit Profile
+          br
+          br
+          input.btn.btn-outline.btn-xl.js-scroll-trigger(type='button', value='Show BIO', name='work', id='work')
+          br
+          .searchResultCont
+
+
+        br
+        br
+        br
+       
+        h1.my-4(style="font-family:'Billabong';color:white;") 
+        .row
+          br
+          br 
+          br
+          br
+          br
+          br
+          br
+          br
+          h3.my-4(style="font-family:'Billabong';color:white;") My Posts
+            -var index1=0;
+            each entry in allUploads
+              .col-md-3.col-sm-6.mb-4
+                a(href="/post/"+entry._id)
+                  p(style="font-family:'Billabong';color:white;font-size: 27px") 
+                    =entry.name
+                  img.img-fluid(src='/images/'+entry.pid, alt='')
+            -index1++;
+        .row
+            h3.my-4(style="font-family:'Billabong';color:white;") Following Posts
+              -var index6=0;
+              each entry6 in otherUploads
+                .col-md-3.col-sm-6.mb-4
+                  a(href="/otherPost/"+entry6._id)
+                    p(style="font-family:'Billabong';color:white;font-size: 27px") 
+                      =entry6.name
+                    img.img-fluid(src='/images/'+entry6.pid, alt='')
+              -index6++;

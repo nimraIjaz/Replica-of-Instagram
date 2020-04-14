@@ -1,0 +1,139 @@
+doctype html
+html(lang='en')
+  head
+    title Instagram profile
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    link(href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', ,='', rel='stylesheet')
+    style.
+      /*making it round */
+      .profilePicture {
+      border-radius: 50%;
+      width:250px;
+      border-color:black;
+      }
+      /*making edit Profile button */
+      .editProfile {
+      background-color: white;
+      color: black;
+      cursor: pointer;
+      border: 2px solid grey;
+      border-radius:5px;
+      }
+      /*making e responsive grid of pictures */
+      .myPosts {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 1px 1px;
+      padding-bottom: 1px;
+      }
+      /*adjusting height width of each image */
+      .eachImage {
+      width: 280px;
+      height: 300px;
+      }
+      /* making each post appearing relative to each other adjusting the distance and making it responsive*/
+      .singlePost {
+      position: relative;
+      flex: 1 0 22rem;
+      margin: 2px;
+      }
+
+body
+  section.container
+    .row
+      .col-sm-3   
+      #PersonalInfo.container-fluid
+        br
+        br
+        img.col-sm-2.profilePicture(src='https://images-na.ssl-images-amazon.com/images/I/41x8JsPOsML.jpg')
+        .col-sm-3
+          sp
+            p
+              br
+              br
+              b meharfatima
+              button.editProfile(disabled='')
+                b  Edit Profile 
+              |   
+
+              button.editProfile(disabled='')
+                i.fa.fa-cog  
+              br
+              br
+              b  5
+              |  posts       
+              b #{followers} 
+              | followers     
+              b 0
+              |  following
+              br
+              br
+              b Mehar 
+              br
+              p Computer Science Student          
+              br
+              br
+  //- section#portfolio.portfolio
+  //-   .container
+  //-     h2.text-center.text-uppercase.text-secondary.mb-0 Portfolio
+  //-     hr.star-dark.mb-5
+  //-     .row
+  //-       .col-md-6.col-lg-4
+  //-         a.portfolio-item.d-block.mx-auto(href='#portfolio-modal-1')
+  //-           img.img-fluid(src='img/bg-cta.jpg', alt='')
+  //-       .col-md-6.col-lg-4
+  //-         a.portfolio-item.d-block.mx-auto(href='#portfolio-modal-1')
+  //-           .portfolio-item-caption.d-flex.position-absolute.h-100.w-100
+  //-             .portfolio-item-caption-content.my-auto.w-100.text-center.text-white
+  //-               i.fas.fa-search-plus.fa-3x
+  //-           img.img-fluid(src='img/bg-cta.jpg.jpg', alt='')
+  //-     .col-md-6.col-lg-4
+  //-         a.portfolio-item.d-block.mx-auto(href='#portfolio-modal-1')
+  //-           .portfolio-item-caption.d-flex.position-absolute.h-100.w-100
+  //-             .portfolio-item-caption-content.my-auto.w-100.text-center.text-white
+  //-               i.fas.fa-search-plus.fa-3x
+  //-           img.img-fluid(src='img/bg-cta.jpg', alt='')
+  //-     .col-md-6.col-lg-4
+  //-         a.portfolio-item.d-block.mx-auto(href='#portfolio-modal-1')
+  //-           .portfolio-item-caption.d-flex.position-absolute.h-100.w-100
+  //-             .portfolio-item-caption-content.my-auto.w-100.text-center.text-white
+  //-               i.fas.fa-search-plus.fa-3x
+  //-           img.img-fluid(src='img/bg-cta.jpg', alt='')
+  //-     .col-md-6.col-lg-4
+  //-         a.portfolio-item.d-block.mx-auto(href='#portfolio-modal-1')
+  //-           .portfolio-item-caption.d-flex.position-absolute.h-100.w-100
+  //-             .portfolio-item-caption-content.my-auto.w-100.text-center.text-white
+  //-               i.fas.fa-search-plus.fa-3x
+  //-           img.img-fluid(src='img/bg-cta.jpg', alt='')
+  //-     .col-md-6.col-lg-4
+  //-         a.portfolio-item.d-block.mx-auto(href='#portfolio-modal-1')
+  //-           .portfolio-item-caption.d-flex.position-absolute.h-100.w-100
+  //-             .portfolio-item-caption-content.my-auto.w-100.text-center.text-white
+  //-               i.fas.fa-search-plus.fa-3x
+  //-           img.img-fluid(src='img/bg-cta.jpg', alt='')
+
+            
+  .row
+    .col-sm-3
+    .col-sm-6
+      hr
+    .col-sm-3
+  .container
+    .myPosts
+      .singlePost
+        img.eachImage(src='img/flowers.jpeg', alt='')
+      .singlePost
+        img.eachImage(src='img/flowers.jpeg', alt='')
+      .singlePost
+        img.eachImage(src='img/flowers.jpeg', alt='')
+      .singlePost
+        img.eachImage(src='img/flowers.jpeg', alt='')
+      .singlePost
+        img.eachImage(src='img/flowers.jpeg', alt='')
+
+  

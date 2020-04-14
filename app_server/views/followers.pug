@@ -1,0 +1,41 @@
+extends layout
+
+block content
+  br
+  br
+  br
+  br
+  .container
+      .row
+        .col-lg-12
+          h1.my-4(style="color:white;font-family: 'Billabong'")
+            b Followers
+      .row  
+        -var index1=0;
+        each entry1 in userfollower  
+          .col-lg-4.col-sm-6.text-center.mb-4
+            a(style='color:white', href="/profile/"+entry1._id)
+              img.rounded-circle.img-fluid.d-block.mx-auto(src="/images/"+entry1.profilePicture, alt='')
+              h3(style="color:white;font-family: 'Billabong'")
+                b 
+                  =entry1.username
+        -index1++;  
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br      
