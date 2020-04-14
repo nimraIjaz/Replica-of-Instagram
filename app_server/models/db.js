@@ -1,7 +1,6 @@
 var mongoose = require("mongoose");
 
-//var dbURI = "mongodb://localhost:27017/Loc8r";
-var dbURI = "mongodb+srv://nimraIjaz:loc8rNimra@loc8r-vh8qz.mongodb.net/test?retryWrites=true&w=majority";
+var dbURI = "mongodb://localhost:27017/Loc8r";
 
 //var dbURI="mongodb://meharfatima:12345678w@ds145563.mlab.com:45563/instagram";
 if (process.env.NODE_ENV === "production") {
@@ -10,6 +9,7 @@ if (process.env.NODE_ENV === "production") {
     dbURI="mongodb+srv://nimraIjaz:loc8rNimra@loc8r-vh8qz.mongodb.net/test?retryWrites=true&w=majority"
     //   mongodb://<dbuser>:<dbpassword>@ds145563.mlab.com:45563/instagram
 }
+
 mongoose.connect(
     dbURI,
     { useNewUrlParser: true }
